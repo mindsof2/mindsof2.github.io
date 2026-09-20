@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="屈辱条约青花鱼专题页，深度解析历史屈辱条约背后的故事，聚焦相关历史文献、学术研究与当代反思，提供权威的历史资料与阅读指南。">
+    <meta name="keywords" content="屈辱条约,青花鱼,历史文献,学术研究,近代史">
+    <title>屈辱条约青花鱼-历史文献与学术研究专题</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .header-actions .btn {
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .search-box {
+            background: #fff;
+            padding: 0.5rem;
+            border-radius: 50px;
+            display: inline-flex;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #a93226;
+        }
+
+        /* Main Content Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 24px;
+            background-color: var(--accent-color);
+            border-radius: 3px;
+        }
+
+        .view-all {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .view-all:hover {
+            color: var(--accent-color);
+        }
+
+        /* Article Cards */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+
+        .card-body {
+            padding: 1.2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+            color: var(--primary-color);
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .read-more {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .topic-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .topic-list a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .topic-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .topic-count {
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            color: #666;
+        }
+
+        /* Quote Block */
+        .quote-block {
+            background-color: #fdf2f2;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-box {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .search-box input {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+
+            .search-box button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <span>📜</span> 历史文献研究
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">历史档案</a></li>
+                <li><a href="#">学术研究</a></li>
+                <li><a href="#">人物志</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="btn btn-outline">登录 / 注册</button>
+        </div>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="container hero-content">
+        <h1>屈辱条约青花鱼</h1>
+        <p>探索近代历史上不平等条约的深远影响，从历史文献到当代学术视角的全面解读。</p>
+        <div class="search-box">
+            <input type="text" placeholder="搜索历史文献、条约名称或研究课题...">
+            <button>搜索</button>
+        </div>
+    </div>
+</div>
+
+<main class="container">
+    <div class="main-layout">
+        <!-- Left Content -->
+        <div class="content-area">
+            
+            <!-- Featured Article -->
+            <article class="card featured-article" style="display: flex; flex-direction: row; margin-bottom: 2rem;">
+                <div class="card-image" style="width: 40%; height: auto; min-height: 300px;">
+                    <img src="https://picsum.photos/seed/history1/600/400" alt="历史文献封面">
+                </div>
+                <div class="card-body" style="width: 60%; padding: 2rem;">
+                    <span class="card-tag">深度阅读</span>
+                    <h2 class="card-title" style="font-size: 1.8rem; margin-bottom: 1rem;">从屈辱条约看近代国家主权意识的觉醒</h2>
+                    <p class="card-excerpt" style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        回顾近代历史上的一系列不平等条约，不仅是领土与资源的丧失，更是民族意识觉醒的起点。本文通过分析“屈辱条约青花鱼”相关历史文献，探讨当时的社会背景、外交博弈以及这些条约对后续历史发展的深远影响。
+                    </p>
+                    <div class="card-footer" style="border-top: none; padding-top: 0;">
+                        <span class="card-meta">2023-10-24 · 作者：历史研究组</span>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Introduction Section -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">研究背景与概念</h2>
+                    <a href="#" class="view-all">更多概念 &rarr;</a>
+                </div>
+                <div class="quote-block">
+                    “历史是最好的教科书，也是最好的清醒剂。了解屈辱条约的历史，是为了更好地走向未来。”
+                </div>
+                <p style="margin-bottom: 1rem;">
+                    在历史学界，关于“屈辱条约青花鱼”的讨论往往集中在特定历史时期的外交档案与条约文本中。这一关键词不仅指代具体的条约名称，更象征着近代中国在面对西方列强时，从被动接受到主动抗争的转变过程。通过梳理相关史料，我们可以清晰地看到国家主权是如何在一系列不平等条约中受到侵蚀，又是如何通过后续的变革逐渐恢复的。
+                </p>
+                <p>
+                    学术界普遍认为，研究这些历史节点，对于理解当代国际关系格局以及维护国家利益具有重要的现实意义。
+                </p>
+            </section>
+
+            <!-- Article Grid -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">最新学术动态</h2>
+                </div>
+                <div class="article-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-tag">学术研究</span>
+                            <img src="https://picsum.photos/seed/treaty2/400/300" alt="条约研究">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">2023-10-20 · 语言学</div>
+                            <h3 class="card-title">条约文本中的语言权力与外交辞令</h3>
+                            <p class="card-excerpt">分析不平等条约中常用词汇的语义演变，探讨外交辞令背后的权力博弈。</p>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">阅读详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-tag">历史档案</span>
+                            <img src="https://picsum.photos/seed/archives3/400/300" alt="档案资料">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">2023-10-18 · 考古</div>
+                            <h3 class="card-title">相关历史遗迹的实地考察报告</h3>
+                            <p class="card-excerpt">记录与该历史时期相关的遗址保护现状，以及文物背后的故事。</p>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">阅读详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-tag">人物传记</span>
+                            <img src="https://picsum.photos/seed/person4/400/300" alt="历史人物">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">2023-10-15 · 传记</div>
+                            <h3 class="card-title">条约签署期间的外交官生平</h3>
+                            <p class="card-excerpt">还原历史人物在屈辱条约签订过程中的真实心理与决策过程。</p>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">阅读详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-tag">文献整理</span>
+                            <img src="https://picsum.photos/seed/doc5/400/300" alt="古籍文献">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">2023-10-12 · 图书</div>
+                            <h3 class="card-title">古籍中的条约记载与校勘</h3>
+                            <p class="card-excerpt">对比不同版本的历史文献，修正条约记录中的讹误。</p>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">阅读详情</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">常见问题 (FAQ)</h2>
+                </div>
+                <div style="background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem;">
+                    <details style="margin-bottom: 1rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 1rem;">
+                        <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">什么是“屈辱条约青花鱼”？</summary>
+                        <p style="margin-top: 0.5rem; color: var(--text-secondary);">
+                            这是一个历史学术研究中的特定关键词，主要指代近代历史上签订的一系列严重损害中国主权的不平等条约。研究这一主题旨在总结历史教训，促进国家发展。
+                        </p>
+                    </details>
+                    <details style="margin-bottom: 1rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 1rem;">
+                        <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">如何查阅相关历史文献？</summary>
+                        <p style="margin-top: 0.5rem; color: var(--text-secondary);">
+                            您可以通过国家图书馆的数字资源、各大高校的档案馆以及本站提供的学术数据库进行检索。建议优先参考官方出版的《中外关系史资料选辑》。
+                        </p>
+                    </details>
+                    <details style="margin-bottom: 0; padding-bottom: 0;">
+                        <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">这些条约对现代中国有何影响？</summary>
+                        <p style="margin-top: 0.5rem; color: var(--text-secondary);">
+                            这些条约深刻地改变了近代中国的地缘政治格局和社会结构，促使中国人民在屈辱中寻求变革与复兴，其精神遗产至今仍是激励民族自强的重要动力。
+                        </p>
+                    </details>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3 class="widget-title">热门专题</h3>
+                <ul class="topic-list">
+                    <li><a href="#">近代外交史 <span class="topic-count">128</span></a></li>
+                    <li><a href="#">不平等条约研究 <span class="topic-count">95</span></a></li>
+                    <li><a href="#">国家主权维护 <span class="topic-count">76</span></a></li>
+                    <li><a href="#">历史文献数字化 <span class="topic-count">43</span></a></li>
+                    <li><a href="#">民国档案解密 <span class="topic-count">31</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">推荐阅读</h3>
+                <ul class="topic-list">
+                    <li><a href="#">条约文本全文校勘版</a></li>
+                    <li><a href="#">相关历史人物年谱</a></li>
+                    <li><a href="#">国际法视角下的不平等条约</a></li>
+                    <li><a href="#">近代边疆政策演变</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget" style="background-color: #2c3e50; color: #fff; border: none;">
+                <h3 class="widget-title" style="border-color: rgba(255,255,255,0.2); color: #fff;">订阅学术简报</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #ccc;">获取最新历史研究动态与文献更新。</p>
+                <input type="email" placeholder="您的邮箱地址" style="width: 100%; padding: 0.8rem; border: none; border-radius: 4px; margin-bottom: 0.5rem;">
+                <button style="width: 100%; padding: 0.8rem; background-color: var(--accent-color); color: #fff; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">订阅</button>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>历史文献研究</h3>
+                <p style="color: #bbb; font-size: 0.9rem; line-height: 1.8;">
+                    致力于打造最权威、最全面的历史文献资源平台，为学者和爱好者提供高质量的学术服务。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>资源分类</h3>
+                <ul>
+                    <li><a href="#">古代史</a></li>
+                    <li><a href="#">近代史</a></li>
+                    <li><a href="#">外交史</a></li>
+                    <li><a href="#">文献数据库</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 历史文献研究网. All Rights Reserved. 本站内容仅供学术研究参考，不代表本站立场。
+        </div>
+    </div>
+</footer>
+
+</body>
+  </html>
