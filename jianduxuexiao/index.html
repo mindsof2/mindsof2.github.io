@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>监督学小抄 - 考试重点梳理与核心概念速查指南</title>
+    <meta name="description" content="监督学小抄网提供监督学核心概念、考试重点及知识点速查。涵盖公共监督、内部监督、外部监督、法律监督等板块，助您快速掌握监督学精髓，轻松应对考试与学术研究。">
+    <meta name="keywords" content="监督学小抄, 监督学, 公共管理, 考试复习, 监督体系, 政治学">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #4a69bd 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .search-box {
+            margin-top: 32px;
+            position: relative;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Main Layout */
+        main {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Grid System */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--accent-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: #f0f2f5;
+            color: var(--text-secondary);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background-color: #1a252f;
+        }
+
+        /* Content List Style */
+        .content-list {
+            list-style: none;
+        }
+
+        .content-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .content-list li:last-child {
+            border-bottom: none;
+        }
+
+        .content-list h4 {
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            color: var(--primary-color);
+        }
+
+        .content-list p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background-color: #eaf2f8;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 24px;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 12px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="#" class="logo">
+            <span>监督</span>学小抄
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#core">核心概念</a></li>
+                <li><a href="#types">监督类型</a></li>
+                <li><a href="#method">监督方法</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="header-inner">
+        <h1>监督学小抄</h1>
+        <p>公共管理与政治学领域的核心复习指南，快速掌握监督体系、权力制约与流程规范。</p>
+        <div class="search-box">
+            <input type="text" placeholder="搜索知识点、关键词或考试重点...">
+        </div>
+    </div>
+</section>
+
+<main>
+    <!-- Introduction Section -->
+    <section id="intro">
+        <div class="highlight-box">
+            <h4>什么是监督学？</h4>
+            <p>监督学是研究监督活动及其规律的科学。它主要探讨在政治、行政、社会等领域中，如何对权力运行进行制约、检查和督促，以确保权力不被滥用、公共资源得到高效利用，并维护社会公平正义。对于备考公共管理硕士（MPA）及相关专业的大学生而言，掌握监督学的框架至关重要。</p>
+        </div>
+    </section>
+
+    <!-- Core Concepts Grid -->
+    <section id="core">
+        <div class="section-title">
+            <h2>核心概念速查</h2>
+            <a href="#">查看全部概念 &rarr;</a>
+        </div>
+        <div class="grid-3">
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon">1</div>
+                    <h3>监督主体</h3>
+                </div>
+                <p>指依法享有监督权力，能够实施监督行为的组织或个人。主要包括国家权力机关（人大）、行政机关、司法机关、政党、社会组织、公民以及舆论媒体等。</p>
+                <div>
+                    <span class="tag">政治学</span>
+                    <span class="tag">公共管理</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon">2</div>
+                    <h3>监督客体</h3>
+                </div>
+                <p>指被监督的对象，通常指掌握公共权力的国家机关及其工作人员（行政主体）以及法律法规授权的组织。其核心特征是拥有一定的公共权力。</p>
+                <div>
+                    <span class="tag">权力结构</span>
+                    <span class="tag">行政法</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon">3</div>
+                    <h3>监督关系</h3>
+                </div>
+                <p>监督主体与监督客体之间基于法律或社会规范产生的相互联系。它体现了权力与制约的关系，是监督活动存在的基础。</p>
+                <div>
+                    <span class="tag">社会学</span>
+                    <span class="tag">法理学</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Types of Supervision -->
+    <section id="types">
+        <div class="section-title">
+            <h2>监督体系分类</h2>
+            <a href="#">查看分类详解 &rarr;</a>
+        </div>
+        <div class="grid-2">
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon">A</div>
+                    <h3>内部监督</h3>
+                </div>
+                <p>指国家机关体系内部，上级机关对下级机关、专门监督机关（如审计、监察）对其他机关实施的监督。这是最直接、最经常的监督形式。</p>
+                <ul class="content-list">
+                    <li>
+                        <h4>层级监督（上对下）</h4>
+                        <p>如国务院对地方各级人民政府的领导与监督。</p>
+                    </li>
+                    <li>
+                        <h4>职能监督</h4>
+                        <p>政府各职能部门在自己的职权范围内对其他部门的监督。</p>
+                    </li>
+                    <li>
+                        <h4>专门监督</h4>
+                        <p>如审计监督、行政监察。</p>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon">B</div>
+                    <h3>外部监督</h3>
+                </div>
+                <p>指国家机关体系外部对行政行为实施的监督。外部监督具有独立性，能有效防止内部监督的局限性。</p>
+                <ul class="content-list">
+                    <li>
+                        <h4>立法监督</h4>
+                        <p>国家权力机关（人大）对“一府一委两院”的监督。</p>
+                    </li>
+                    <li>
+                        <h4>司法监督</h4>
+                        <p>人民法院和人民检察院对行政活动的监督。</p>
+                    </li>
+                    <li>
+                        <h4>社会监督</h4>
+                        <p>包括政党监督、舆论监督、群众监督和公民监督。</p>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- Key Methods -->
+    <section id="method">
+        <div class="section-title">
+            <h2>常用监督方法</h2>
+            <a href="#">更多方法 &rarr;</a>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <h3>事前预防</h3>
+                <p>在决策和执行前进行审核，通过制定规章制度、审批程序、回避制度等，从源头上防止权力滥用。</p>
+            </div>
+            <div class="card">
+                <h3>事中控制</h3>
+                <p>在执行过程中进行跟踪检查，通过现场视察、专项审计、绩效考核等手段，及时纠正偏差。</p>
+            </div>
+            <div class="card">
+                <h3>事后补救</h3>
+                <p>在事件发生后进行查处，包括行政复议、行政诉讼、行政赔偿以及党纪政纪处分等。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="section-title">
+            <h2>常见问题（FAQ）</h2>
+        </div>
+        <div class="grid-2">
+            <div class="card">
+                <h3>监督学与公共行政学有什么区别？</h3>
+                <p>公共行政学侧重于行政管理的运行过程和职能，而监督学侧重于对行政权力的制约与规范。监督是公共行政学的重要组成部分，但更专注于“制衡”这一维度。</p>
+            </div>
+            <div class="card">
+                <h3>如何理解“权力监督”？</h3>
+                <p>权力监督是指监督主体依据法定权限和程序，对监督客体的权力行使过程进行监察和督导。其核心在于防止权力失控、滥用和异化。</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">版权声明</a>
+            <a href="#">使用条款</a>
+            <a href="#">联系支持</a>
+        </div>
+        <p>&copy; 2023 监督学小抄. 仅供学习参考，内容整理自公共管理权威教材。</p>
+    </div>
+</footer>
+
+</body>
+</html>
