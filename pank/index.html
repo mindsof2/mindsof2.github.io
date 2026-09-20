@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pankoo釜山料理官方门户，提供正宗韩国釜山风味料理食谱、食材选购指南、餐厅推荐及烹饪技巧。探索韩式海鲜汤、辣炒年糕等经典菜品，开启您的釜山美食之旅。">
+    <meta name="keywords" content="pankoo釜山料理,韩国料理,釜山美食,韩式食谱,海鲜料理">
+    <title>pankoo釜山料理-正宗韩国风味食谱与餐厅推荐</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #E60012; /* Pankoo Red */
+            --primary-hover: #c4000e;
+            --secondary-color: #2C3E50;
+            --accent-color: #F39C12;
+            --bg-light: #F9F9F9;
+            --bg-white: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+            margin-left: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/koreanfood/1600/900.jpg') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+            background-color: var(--bg-white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        /* Popular Dishes */
+        .popular-dishes {
+            padding: 80px 0;
+        }
+
+        .dish-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .dish-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.3s;
+        }
+
+        .dish-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .dish-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .dish-content {
+            padding: 20px;
+        }
+
+        .dish-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .dish-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .dish-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .dish-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Restaurant Section */
+        .restaurants {
+            padding: 80px 0;
+            background-color: var(--bg-white);
+        }
+
+        .restaurant-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .restaurant-card {
+            display: flex;
+            gap: 20px;
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+
+        .restaurant-img {
+            width: 120px;
+            height: 120px;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .restaurant-info h3 {
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+        }
+
+        .restaurant-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Tips & FAQ */
+        .tips-section {
+            padding: 80px 0;
+        }
+
+        .tips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .tips-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .tips-list li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tips-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .faq-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item .faq-question::after {
+            content: '+';
+            font-weight: bold;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 15px;
+        }
+
+        .newsletter p {
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        .subscribe-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            padding: 12px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+        }
+
+        .subscribe-form button {
+            padding: 12px 30px;
+            border-radius: 4px;
+            border: none;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            nav.open {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .subscribe-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">pankoo<span>釜山料理</span></a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#dishes">经典料理</a></li>
+                    <li><a href="#restaurants">餐厅推荐</a></li>
+                    <li><a href="#tips">烹饪指南</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#dishes" class="btn btn-primary">开始探索</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>品味釜山，尽在 pankoo釜山料理</h1>
+                <p>从正宗的辣炒年糕到鲜美的海鲜汤，我们带您领略韩国釜山海岸线的独特风味与热情好客。</p>
+                <a href="#dishes" class="btn btn-primary">浏览食谱</a>
+                <a href="#restaurants" class="btn btn-outline" style="color: #fff; border-color: #fff; margin-left: 10px;">查找餐厅</a>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🥘</div>
+                        <h3>正宗配方</h3>
+                        <p>严格遵循传统韩国釜山料理的制作工艺，还原地道的海鲜与辣味风味。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🦀</div>
+                        <h3>新鲜食材</h3>
+                        <p>每日精选当季海鲜与优质农产品，确保每一口都新鲜健康。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍🍳</div>
+                        <h3>专业指导</h3>
+                        <p>提供详细的烹饪步骤与技巧，让您在家也能轻松复刻釜山味道。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Dishes -->
+        <section id="dishes" class="popular-dishes">
+            <div class="container">
+                <h2 class="section-title">热门釜山料理</h2>
+                <p class="section-subtitle">探索最受欢迎的韩国釜山特色菜肴，感受舌尖上的韩国风情。</p>
+                
+                <div class="dish-grid">
+                    <!-- Dish 1 -->
+                    <article class="dish-card">
+                        <img src="https://picsum.photos/seed/pangyo/400/300.jpg" alt="辣炒年糕" class="dish-image">
+                        <div class="dish-content">
+                            <span class="dish-tag">主食</span>
+                            <h3 class="dish-title">辣炒年糕 (Tteokbokki)</h3>
+                            <p class="dish-desc">釜山最经典的街头小吃，软糯的年糕搭配甜辣酱汁，加入鱼饼和鱼丸，是朋友聚餐的首选。</p>
+                            <div class="dish-footer">
+                                <span>⏱ 难度: 简单</span>
+                                <a href="#" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">查看做法</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Dish 2 -->
+                    <article class="dish-card">
+                        <img src="https://picsum.photos/seed/haejjang/400/300.jpg" alt="海鲜汤" class="dish-image">
+                        <div class="dish-content">
+                            <span class="dish-tag">汤品</span>
+                            <h3 class="dish-title">海鲜汤 (Haejjang)</h3>
+                            <p class="dish-desc">以新鲜蛤蜊和海带为主料，汤头清淡鲜美，是釜山渔民餐桌上必不可少的开胃汤。</p>
+                            <div class="dish-footer">
+                                <span>⏱ 难度: 中等</span>
+                                <a href="#" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">查看做法</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Dish 3 -->
+                    <article class="dish-card">
+                        <img src="https://picsum.photos/seed/bibim/400/300.jpg" alt="拌饭" class="dish-image">
+                        <div class="dish-content">
+                            <span class="dish-tag">主食</span>
+                            <h3 class="dish-title">石锅拌饭 (Dolsot Bibimbap)</h3>
+                            <p class="dish-desc">米饭、蔬菜、肉类与特制辣酱在滚烫的石锅中混合，底部形成焦脆的锅巴，香气扑鼻。</p>
+                            <div class="dish-footer">
+                                <span>⏱ 难度: 简单</span>
+                                <a href="#" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">查看做法</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Dish 4 -->
+                    <article class="dish-card">
+                        <img src="https://picsum.photos/seed/kimchi/400/300.jpg" alt="泡菜" class="dish-image">
+                        <div class="dish-content">
+                            <span class="dish-tag">配菜</span>
+                            <h3 class="dish-title">泡菜 (Kimchi)</h3>
+                            <p class="dish-desc">韩国饮食的灵魂，釜山特有的酸辣口味，富含益生菌，是健康饮食的绝佳选择。</p>
+                            <div class="dish-footer">
+                                <span>⏱ 难度: 中等</span>
+                                <a href="#" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">查看做法</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurant Recommendations -->
+        <section id="restaurants" class="restaurants">
+            <div class="container">
+                <h2 class="section-title">釜山风味餐厅推荐</h2>
+                <p class="section-subtitle">无论身在何处，都能找到那股熟悉的釜山味道。</p>
+                
+                <div class="restaurant-list">
+                    <div class="restaurant-card">
+                        <img src="https://picsum.photos/seed/rest1/200/200.jpg" alt="釜山海鲜市场" class="restaurant-img">
+                        <div class="restaurant-info">
+                            <h3>釜山广安里海鲜市场</h3>
+                            <div class="restaurant-meta">
+                                <span>📍 广安里海水浴场旁</span> | 
+                                <span class="rating">★★★★★ 4.8</span>
+                            </div>
+                            <p>这里提供最新鲜的海产，您可以现场挑选并要求店家加工，享受最地道的海鲜盛宴。</p>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <img src="https://picsum.photos/seed/rest2/200/200.jpg" alt="札嘎其市场" class="restaurant-img">
+                        <div class="restaurant-info">
+                            <h3>札嘎其市场餐厅</h3>
+                            <div class="restaurant-meta">
+                                <span>📍 南浦洞</span> | 
+                                <span class="rating">★★★★☆ 4.5</span>
+                            </div>
+                            <p>韩国最大的渔市场，汇集了各种海产干货和新鲜食材，是品尝釜山料理的必去之地。</p>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <img src="https://picsum.photos/seed/rest3/200/200.jpg" alt="海云台韩定食" class="restaurant-img">
+                        <div class="restaurant-info">
+                            <h3>海云台韩定食馆</h3>
+                            <div class="restaurant-meta">
+                                <span>📍 海云台洞</span> | 
+                                <span class="rating">★★★★★ 4.9</span>
+                            </div>
+                            <p>提供精致的韩式套餐，环境优雅，服务周到，适合商务宴请或家庭聚餐。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips & FAQ -->
+        <section id="tips" class="tips-section">
+            <div class="container">
+                <div class="tips-container">
+                    <div class="tips-content">
+                        <h2 class="section-title" style="text-align: left;">烹饪与选购指南</h2>
+                        <ul class="tips-list">
+                            <li>
+                                <strong>如何挑选优质辣酱？</strong>
+                                <p style="margin-top: 5px; color: var(--text-light);">正宗的釜山辣酱通常使用辣椒粉、糯米粉和鱼露制成，颜色红亮，味道鲜辣而不苦涩。</p>
+                            </li>
+                            <li>
+                                <strong>海鲜清洗的小技巧</strong>
+                                <p style="margin-top: 5px; color: var(--text-light);">清洗蛤蜊时，在水中加入一勺盐和一勺面粉，静置半小时可以让蛤蜊吐出沙子。</p>
+                            </li>
+                            <li>
+                                <strong>石锅的使用注意</strong>
+                                <p style="margin-top: 5px; color: var(--text-light);">新买的石锅使用前需先用油加热，避免直接干烧导致破裂。清洗时请勿用钢丝球刮擦。</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="faq-section">
+                        <h2 class="section-title" style="text-align: left;">常见问题</h2>
+                        
+                        <div class="faq-item" onclick="toggleFaq(this)">
+                            <div class="faq-question">韩式料理太辣怎么办？</div>
+                            <div class="faq-answer">可以加入少许牛奶或糖来中和辣味，或者选择不辣的食材搭配食用。</div>
+                        </div>
+
+                        <div class="faq-item" onclick="toggleFaq(this)">
+                            <div class="faq-question">泡菜可以保存多久？</div>
+                            <div class="faq-answer">密封冷藏通常可保存1-2个月。如果发现表面发霉或异味，请勿食用。</div>
+                        </div>
+
+                        <div class="faq-item" onclick="toggleFaq(this)">
+                            <div class="faq-question">哪里能买到正宗的pangyo调味料？</div>
+                            <div class="faq-answer">您可以在本站的“调料商城”栏目选购我们精选的韩国进口调味料包。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>订阅我们的美食周刊</h2>
+                <p>获取最新食谱、餐厅优惠及釜山美食资讯，每周发送一次。</p>
+                <form class="subscribe-form" onsubmit="event.preventDefault(); alert('感谢订阅！我们会将最新美食资讯发送给您。');">
+                    <input type="email" placeholder="请输入您的电子邮箱" required>
+                    <button type="submit">立即订阅</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px; color: #fff;">pankoo<span>釜山料理</span></div>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">致力于推广韩国釜山地区的饮食文化，分享正宗的料理方法与餐厅推荐，让更多人了解和喜爱釜山美食。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#dishes">热门食谱</a></li>
+                        <li><a href="#restaurants">餐厅地图</a></li>
+                        <li><a href="#tips">烹饪技巧</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">海鲜料理</a></li>
+                        <li><a href="#">辣味料理</a></li>
+                        <li><a href="#">韩式拌饭</a></li>
+                        <li><a href="#">韩式烤肉</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱: contact@pankoo-food.com</li>
+                        <li>电话: 400-123-4567</li>
+                        <li>地址: 釜山广域市海云台区海水浴场路</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 pankoo釜山料理. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('open');
+        }
+
+        // FAQ Accordion
+        function toggleFaq(element) {
+            // Close all other items
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            element.classList.toggle('active');
+        }
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('mainNav').classList.remove('open');
+                    
+                    // Adjust for fixed header
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+              </html>
