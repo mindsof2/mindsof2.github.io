@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>妲己的任务txt - 原创同人小说资源与阅读指南</title>
+    <meta name="description" content="妲己的任务txt小说阅读站，提供《妲己的任务》同人作品TXT下载、在线阅读及章节更新。收录经典穿越、历史架空题材同人小说，支持手机阅读与离线下载。">
+    <meta name="keywords" content="妲己的任务txt, 妲己的任务小说, 妲己的任务下载, 同人小说, TXT小说, 穿越小说">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --primary-hover: #9b59b6;
+            --secondary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 4px 12px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 4px;
+            font-size: 0.9rem;
+            width: 150px;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+
+        /* 分类与筛选 */
+        .filter-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .categories {
+            display: flex;
+            gap: 12px;
+        }
+
+        .category-tag {
+            padding: 6px 16px;
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .category-tag.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* 小说列表 */
+        .novel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .novel-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .novel-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-cover {
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .card-content {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-sm {
+            flex: 1;
+            padding: 8px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* 特色板块 */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            padding-left: 12px;
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-section {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 40px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #f3e5f5;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-text p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 章节列表 */
+        .chapter-list {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-title {
+            color: var(--secondary-color);
+        }
+
+        .chapter-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .btn-full {
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 40px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .novel-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>📚</span> 妲己的任务txt
+            </div>
+            <nav class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">分类</a>
+                <a href="#">排行榜</a>
+                <a href="#">作者专区</a>
+                <a href="#">留言板</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索小说...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>《妲己的任务》同人小说阅读站</h1>
+                <p>收录全网最热门的《妲己的任务》TXT下载资源，提供高清章节阅读与离线缓存功能，打造沉浸式同人阅读体验。</p>
+                <a href="#latest" class="btn btn-primary">立即阅读</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 筛选栏 -->
+            <div class="filter-bar">
+                <div class="categories">
+                    <span class="category-tag active">全部</span>
+                    <span class="category-tag">穿越</span>
+                    <span class="category-tag">历史</span>
+                    <span class="category-tag">游戏同人</span>
+                    <span class="category-tag">虐恋</span>
+                </div>
+                <div style="font-size: 0.9rem; color: #666;">
+                    共收录 <strong>128</strong> 部相关同人作品
+                </div>
+            </div>
+
+            <!-- 推荐列表 -->
+            <h2 class="section-title">热门推荐</h2>
+            <section class="novel-grid">
+                <!-- 小说卡片 1 -->
+                <article class="novel-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/daji1/400/300" alt="小说封面">
+                        <span class="card-badge">连载中</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">商朝风云：妲己的任务</h3>
+                        <div class="card-meta">
+                            <span>作者：红尘过客</span>
+                            <span>12.5万字</span>
+                        </div>
+                        <p class="card-desc">一段穿越商朝的奇幻旅程，主角意外绑定系统，成为了必须要完成任务的妲己。面对纣王的宠爱与朝堂的危机，她该如何抉择...</p>
+                        <div class="card-actions">
+                            <button class="btn btn-sm btn-outline">阅读</button>
+                            <button class="btn btn-sm btn-primary">TXT下载</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 小说卡片 2 -->
+                <article class="novel-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/daji2/400/300" alt="小说封面">
+                        <span class="card-badge">完结</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">狐狸精的逆袭：妲己的任务</h3>
+                        <div class="card-meta">
+                            <span>作者：幻梦空间</span>
+                            <span>8.2万字</span>
+                        </div>
+                        <p class="card-desc">原本只想做一只安静狐狸的妲己，却被迫卷入了一场跨越千年的阴谋。为了活下去，她必须完成系统发布的各种奇葩任务。</p>
+                        <div class="card-actions">
+                            <button class="btn btn-sm btn-outline">阅读</button>
+                            <button class="btn btn-sm btn-primary">TXT下载</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 小说卡片 3 -->
+                <article class="novel-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/daji3/400/300" alt="小说封面">
+                        <span class="card-badge">连载中</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">封神：妲己的任务</h3>
+                        <div class="card-meta">
+                            <span>作者：神话重构</span>
+                            <span>15.0万字</span>
+                        </div>
+                        <p class="card-desc">重新解读封神榜，妲己不再是单纯的祸水，她背负着太虚古界的最后使命。与姜子牙的智斗，与申公豹的博弈，精彩不断。</p>
+                        <div class="card-actions">
+                            <button class="btn btn-sm btn-outline">阅读</button>
+                            <button class="btn btn-sm btn-primary">TXT下载</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 小说卡片 4 -->
+                <article class="novel-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/daji4/400/300" alt="小说封面">
+                        <span class="card-badge">完结</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">帝辛的宠妃：妲己的任务</h3>
+                        <div class="card-meta">
+                            <span>作者：古风雅韵</span>
+                            <span>6.8万字</span>
+                        </div>
+                        <p class="card-desc">细腻的情感描写，讲述了一段在乱世中相濡以沫的爱情故事。妲己如何用温柔化解君王的暴戾，成为他唯一的依靠。</p>
+                        <div class="card-actions">
+                            <button class="btn btn-sm btn-outline">阅读</button>
+                            <button class="btn btn-sm btn-primary">TXT下载</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- 特色板块 -->
+            <section class="feature-section">
+                <h2 class="section-title">为什么选择我们</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <div class="feature-text">
+                            <h3>极速更新</h3>
+                            <p>第一时间同步作者最新章节，绝不让你错过任何精彩剧情。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💾</div>
+                        <div class="feature-text">
+                            <h3>离线下载</h3>
+                            <p>支持一键下载《妲己的任务》TXT格式，随时随地无网畅读。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-text">
+                            <h3>安全无毒</h3>
+                            <p>所有资源经过人工审核，确保文件纯净，保护您的设备安全。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 章节列表示例 -->
+            <h2 class="section-title">最新章节</h2>
+            <section class="chapter-list" id="latest">
+                <div class="chapter-item">
+                    <a href="#" class="chapter-title">第142章：朝堂辩论</a>
+                    <span class="chapter-date">2023-10-24</span>
+                </div>
+                <div class="chapter-item">
+                    <a href="#" class="chapter-title">第141章：夜探皇宫</a>
+                    <span class="chapter-date">2023-10-22</span>
+                </div>
+                <div class="chapter-item">
+                    <a href="#" class="chapter-title">第140章：新的线索</a>
+                    <span class="chapter-date">2023-10-20</span>
+                </div>
+                <div class="chapter-item">
+                    <a href="#" class="chapter-title">第139章：危机四伏</a>
+                    <span class="chapter-date">2023-10-18</span>
+                </div>
+                <div class="chapter-item">
+                    <a href="#" class="chapter-title">第138章：信任危机</a>
+                    <span class="chapter-date">2023-10-15</span>
+                </div>
+                <button class="btn btn-primary btn-full btn-sm">查看全部章节</button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        本站专注于同人小说资源分享，致力于为读者提供高质量的TXT下载与在线阅读服务。如果您喜欢《妲己的任务》，请支持正版。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页推荐</a></li>
+                        <li><a href="#">全本小说</a></li>
+                        <li><a href="#">热门排行</a></li>
+                        <li><a href="#">标签分类</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>常见问题</h4>
+                    <ul>
+                        <li><a href="#">如何下载TXT？</a></li>
+                        <li><a href="#">如何联系作者？</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">网站地图</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 妲己的任务txt阅读站 版权所有. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
